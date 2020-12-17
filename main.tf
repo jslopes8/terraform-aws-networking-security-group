@@ -6,7 +6,7 @@ resource "aws_security_group" "main" {
 
     tags    = merge(
         {
-            "Name"  =   "${var.name}"
+            "Name"  =   var.name
         },
         var.default_tags
     )
