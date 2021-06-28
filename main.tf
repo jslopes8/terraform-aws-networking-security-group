@@ -23,7 +23,7 @@ resource "aws_security_group_rule" "main" {
     to_port                     = lookup(var.rule[count.index], "to_port", null)
     protocol                    = lookup(var.rule[count.index], "protocol", null)
     cidr_blocks                 = lookup(var.rule[count.index], "cidr_blocks", null)
-    source_security_group_id    = lookup(var.rule[count.index], "source_security_group_id", null)
+    source_security_group_id    = lookup(var.rule[count.index], "sec_group_id", null)
 }
 resource "aws_security_group_rule" "egress" {
     type              = "egress"
